@@ -99,6 +99,12 @@
                 if (name) {
                     customSchemeURL += `&name=${encodeURIComponent(name)}`;
                 }
+                // Get the level data from URL
+                console.log('Full URL:', window.location.href);
+                const urlParams = new URLSearchParams(window.location.search);
+                console.log('Search params:', window.location.search);
+                const levelData = urlParams.get('data');
+                console.log('Level data:', levelData);
 
                 // Try to open the app
                 window.location.href = customSchemeURL;
