@@ -1,0 +1,106 @@
+# .gitignore for flippyflip_community
+# Covers macOS, editors/IDEs, common language/tool build artifacts, and environment files
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Desktop.ini
+# Recycle Bin folder (Windows)
+$RECYCLE.BIN/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+# Optional: uncomment if you want to ignore lockfiles
+# package-lock.json
+# yarn.lock
+
+# Logs
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Build artifacts
+dist/
+build/
+bundled/
+release/
+target/
+out/
+coverage/
+.nyc_output/
+coverage-report/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+env/
+venv/
+.venv/
+ENV/
+.env.local
+.env.*.local
+.Python
+
+# Pytest
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# JetBrains
+*.iml
+.idea/
+out/
+
+# Visual Studio
+.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# macOS files
+Icon?
+
+# Temp files
+*.swp
+*~
+*.tmp
+*.temp
+
+# System files
+.DS_Store?
+
+# Misc
+*.bak
+*.orig
+
+# Static site generators / hosting
+# Ignore GitHub Pages artifacts when using static site generators
+_site/
+
+# Optional: add project-specific files you don't want to commit
+# e.g., local IDE files, credentials, compiled binaries
+
+# End of .gitignore

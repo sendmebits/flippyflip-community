@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlippyFlip Level Share</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .icon {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 1em;
+            border-radius: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            opacity: 0.9;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+        }
+
+        .app-store {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .app-store.show {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="flippyflip_512.png" class="icon" alt="FlippyFlip Logo">
+        <h1>FlippyFlip Level</h1>
+        <p id="status">Opening FlippyFlip...</p>
+        <div class="app-store">
+            <p>Don't have FlippyFlip yet?</p>
+            <a href="https://apps.apple.com/app/flippyflip/id123456789" class="button">Download on App Store</a>
+        </div>
+    </div>
+
+    <script>
+        // Get the level data from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const levelData = urlParams.get('data');
+
+        if (levelData) {
+            // Decode the level data to extract parameters for custom scheme
+            try {
+                const decoded = atob(levelData.replace(/-/g, '+').replace(/_/g, '/'));
+                const parts = decoded.split('|');
+                const gridString = parts[0];
+                const par = parts[1] || '1';
+                const name = parts[2] || '';
+
+                // Build custom scheme URL
+                let customSchemeURL = `flippyflip://level?v=${gridString}&par=${par}`;
+                if (name) {
+                    customSchemeURL += `&name=${encodeURIComponent(name)}`;
+                }
+
+                // Try to open the app
+                window.location.href = customSchemeURL;
+
+                // Show App Store link after a delay
+                setTimeout(() => {
+                    document.getElementById('status').textContent = 'App not installed?';
+                    document.querySelector('.app-store').classList.add('show');
+                }, 2000);
+            } catch (e) {
+                document.getElementById('status').textContent = 'Invalid level link';
+                console.error('Failed to decode level data:', e);
+            }
+        } else {
+            document.getElementById('status').textContent = 'Invalid level link';
+            document.querySelector('.app-store').classList.add('show');
+        }
+    </script>
+</body>
+
+</html>
