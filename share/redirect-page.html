@@ -94,8 +94,8 @@
                 const par = parts[1] || '1';
                 const name = parts[2] || '';
 
-                // Build custom scheme URL
-                let customSchemeURL = `flippyflip://level?v=${gridString}&par=${par}`;
+                // Build custom scheme URL with proper encoding
+                let customSchemeURL = `flippyflip://play?grid=${encodeURIComponent(gridString)}&par=${encodeURIComponent(par)}`;
                 if (name) {
                     customSchemeURL += `&name=${encodeURIComponent(name)}`;
                 }
