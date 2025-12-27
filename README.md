@@ -16,9 +16,9 @@
 
 ## 🧩 About The Game
 
-**FlippyFlip** is an engaging puzzle game built natively for iOS. The goal is simple yet challenging: flip square tiles to match the target pattern. 
+**FlippyFlip** is an engaging puzzle game built natively for iOS. The goal is simple yet challenging: flip square tiles to make the whole grid white.
 
-Players navigate through a **tier-based progression system**, unlocking new challenges as they master previous ones. The game combines the declarative power of **SwiftUI** with the high-performance rendering of **SpriteKit** to deliver a smooth, responsive experience.
+Players navigate through a **tier-based progression system**, unlocking new challenges as they master previous ones.
 
 ## ✨ Key Features
 
@@ -26,6 +26,7 @@ Players navigate through a **tier-based progression system**, unlocking new chal
 - **Unique Mechanics**: Select 2x2 (or larger) square regions to flip tiles.
 - **Theme Aware**: Beautiful dark and light mode support using standard iOS design patterns.
 - **Instant Play**: minimal load times and fluid animations.
+- **Level Editor**: Create your own levels and share them with the community.
 
 ## 📱 Mechanics
 
