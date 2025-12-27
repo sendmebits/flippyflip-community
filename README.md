@@ -1,13 +1,15 @@
 <div align="center">
-  <img src="share/flippyflip_512.png" alt="Flippy Flip Logo" width="180"/>
+  <img src="share/flippyflip_512.png" alt="Flippy Flip Logo" width="180" style="border-radius: 18%;" />
   
-  # Flippy Flip
+  <h1>Flippy Flip</h1>
   
-  **An addictive and fun puzzle game for iOS. Flip tiles. Solve patterns. Master the grid.**
+  <p><strong>An addictive and fun puzzle game for iOS. Flip tiles. Solve patterns. Master the grid.</strong></p>
   
   <br />
 
-  [![Download on the App Store](https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg)](https://apps.apple.com/ca/app/flippy-flip/id6756283424)
+  <a href="https://apps.apple.com/ca/app/flippy-flip/id6756283424">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+  </a>
 
   <br />
 </div>
