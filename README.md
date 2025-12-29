@@ -24,7 +24,7 @@ Players navigate through a **tier-based progression system**, unlocking new chal
 
 ## ✨ Key Features
 
-- **120+ Levels**: Extensive campaign across 6 distinct difficulty tiers.
+- **180+ Levels**: Extensive campaign across 6 distinct difficulty tiers.
 - **Unique Mechanics**: Select 2x2 (or larger) square regions to flip tiles.
 - **Theme Aware**: Beautiful dark and light mode support using standard iOS design patterns.
 - **Instant Play**: minimal load times and fluid animations.
